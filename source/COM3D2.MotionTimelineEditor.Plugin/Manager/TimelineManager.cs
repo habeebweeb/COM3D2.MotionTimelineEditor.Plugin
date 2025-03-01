@@ -1088,6 +1088,7 @@ namespace COM3D2.MotionTimelineEditor.Plugin
             MTEUtils.UIHide();
             mte.isVisible = false;
             studioHack.isUIVisible = false;
+            config.isKeyInputEnabled = false;
 
             SetPlayingTimeAll((float) frameTime);
             onSeekCurrentFrame?.Invoke();
@@ -1135,6 +1136,7 @@ namespace COM3D2.MotionTimelineEditor.Plugin
             MTEUtils.UIResume();
             mte.isVisible = true;
             studioHack.isUIVisible = true;
+            config.isKeyInputEnabled = true;
 
             UnityEngine.Object.Destroy(texture);
 
